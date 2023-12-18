@@ -3,11 +3,11 @@
   <div class="blob-container">
     <div id="blob" ref="blob"></div>
   </div>
-  <main>
+  <div class="container">
     <TheNav></TheNav>
     <router-view></router-view>
     <TheFooter></TheFooter>
-  </main>
+  </div>
 </template>
 
 <script setup>
@@ -34,7 +34,7 @@ window.onpointermove = (event) => {
 body {
   height: auto;
 }
-main {
+.container {
   position: relative;
   background-image: url('assets/svg/polygon-scatter-haikei-large.svg');
   background-position: center;
