@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:5173/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="module" src="./Vite App_files/client"></script>
+
+    
+    <link rel="icon" href="./Vite App_files/logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./Vite App_files/css2" rel="stylesheet">
+    <title>Vite App</title>
+  <style type="text/css" data-vite-dev-id="/Users/_xbaran/crypto-api-website/src/assets/main.css">:root {
+  /*----===< Font sizes >===----*/
+
+  --font-size-1: clamp(0.8438rem, 0.7459rem + 0.4891vw, 1.125rem);
+  --font-size-2: clamp(1.125rem, 0.9946rem + 0.6522vw, 1.5rem);
+  --font-size-3: clamp(1.4994rem, 1.3255rem + 0.8696vw, 1.9994rem);
+  --font-size-4: clamp(1.9988rem, 1.7668rem + 1.1598vw, 2.6656rem);
+  --font-size-5: clamp(2.6644rem, 2.3552rem + 1.5457vw, 3.5531rem);
+  --font-size-6: clamp(3.5519rem, 3.1399rem + 2.0598vw, 4.7363rem);
+  --font-size-7: clamp(4.735rem, 4.1861rem + 2.7446vw, 6.3131rem);
+
+  /*----===< Spacing >===----*/
+
+  --space-2xs: clamp(0.5625rem, 0.5408rem + 0.1087vw, 0.625rem);
+  --space-xs: clamp(0.875rem, 0.8533rem + 0.1087vw, 0.9375rem);
+  --space-s: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --space-m: clamp(2.25rem, 2.163rem + 0.4348vw, 2.5rem);
+  --space-l: clamp(3.375rem, 3.2446rem + 0.6522vw, 3.75rem);
+  --space-xl: clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem);
+  --space-2xl: clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem);
+  --space-3xl: clamp(9rem, 8.6522rem + 1.7391vw, 10rem);
+
+  /* One-up pairs */
+  --space-2xs-xs: clamp(0.5625rem, 0.4321rem + 0.6522vw, 0.9375rem);
+  --space-xs-s: clamp(0.875rem, 0.7446rem + 0.6522vw, 1.25rem);
+  --space-s-m: clamp(1.125rem, 0.6467rem + 2.3913vw, 2.5rem);
+  --space-m-l: clamp(2.25rem, 1.7283rem + 2.6087vw, 3.75rem);
+  --space-l-xl: clamp(3.375rem, 2.8098rem + 2.8261vw, 5rem);
+  --space-xl-2xl: clamp(4.5rem, 3.4565rem + 5.2174vw, 7.5rem);
+  --space-2xl-3xl: clamp(6.75rem, 5.6196rem + 5.6522vw, 10rem);
+
+  /*----===< Colors >===----*/
+
+  --c-pure-white: #fff;
+  --c-white: #eeeeff;
+  --c-light-blue: #00f4e8;
+  --c-blue: #1e589a;
+  --c-dark-blue: #04192f;
+  --c-black: #010910;
+  --c-cyan: hsl(196, 79%, 55%);
+  --c-blue-transparent: #1e589a8f;
+
+  --color-background: var(--c-dark-blue);
+  --color-text: var(--c-white);
+
+  --button-bg-primary: transparent;
+  --button-bg-primary-hover: var(--c-light-blue);
+  --button-color-text-primary: var(--c-white);
+  --button-color-text-pirmary-hover: var(--c-black);
+  --button-border-color-primary: var(--white);
+  --button-border-color-primary-hover: var(--c-light-blue);
+
+  --button-bg-accent: var(--c-light-blue);
+  --button-bg-accent-hover: var(--c-cyan);
+  --button-color-text-accent: var(--c-black);
+  --button-color-text-accent-hover: var(--c-white);
+  --button-border-color-accent: var(--c-light-blue);
+  --button-border-color-accent-hover: var(--c-cyan);
+
+  --nav-background-color: var(--c-blue-transparent);
+  --nav-menu-background-color: var(--c-dark-blue);
+  --nav-hamburger-color: var(--c-white);
+  --nav-link-color: var(--c-white);
+  --nav-border-color: var(--c-black);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: var(--font-size-1);
+  background-color: var(--color-background);
+
+  color: var(--color-text);
+  max-width: 100vw;
+  overflow-x: hidden;
+  z-index: 5;
+}
+
+body:has(.menu.menuActive) {
+  position: fixed;
+}
+
+.wrapper {
+  margin-inline: auto;
+  padding-inline: var(--space-s);
+  width: 100%;
+  max-width: 1200px;
+}
+
+.flow {
+  --flow-spacer: 1em;
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-spacer);
+}
+
+section {
+  padding-block: var(--space-2xl);
+}
+
+.heading {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: 'League Spartan';
+  letter-spacing: 2px;
+  color: aquamarine; /* fallback for old browsers */
+  background: linear-gradient(to right, aquamarine, mediumpurple);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 768px) {
+  body:has(.menu.menuActive) {
+    position: static;
+  }
+}
+</style><style type="text/css" data-vite-dev-id="/Users/_xbaran/crypto-api-website/src/components/TheHeader.vue?vue&amp;type=style&amp;index=0&amp;scoped=6c285e9a&amp;lang.css">
+h1[data-v-6c285e9a] {
+  font-size: var(--font-size-5);
+}
+.buttons[data-v-6c285e9a] {
+  display: flex;
+  gap: 1em;
+}
+section[data-v-6c285e9a] {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-block-start: var(--space-xl-2xl);
+  padding-block-end: var(--space-m);
+  paddinga-inline: var(--space-xs);
+  min-height: 100vh;
+  max-width: 100vw;
+  z-index: 3;
+}
+.wrapper[data-v-6c285e9a] {
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-l);
+}
+.header[data-v-6c285e9a] {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-s);
+  height: 76%;
+}
+p[data-v-6c285e9a] {
+  font-size: var(--font-size-2);
+}
+.flow[data-v-6c285e9a] {
+  --flow-spacer: var(--space-s);
+}
+.cards[data-v-6c285e9a] {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  gap: var(--space-xs);
+  perspective: 1600px;
+  padding-block: var(--space-l);
+  height: 100%;
+}
+.cards .card[data-v-6c285e9a] {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  transition: transform 0.3s;
+  overflow: hidden;
+}
+.cards .card[data-v-6c285e9a]:nth-of-type(1) {
+  grid-column: 1 / 3;
+  grid-row: 2 / 5;
+}
+.cards .card[data-v-6c285e9a]:nth-of-type(2) {
+  grid-column: 3 / -1;
+  grid-row: 1 / 4;
+}
+.cards .card[data-v-6c285e9a]:nth-of-type(3) {
+  grid-column: 1 / 3;
+  grid-row: 5 / -1;
+}
+.cards .card[data-v-6c285e9a]:nth-of-type(4) {
+  grid-column: 3 / -1;
+  grid-row: 4 / 7;
+}
+img[data-v-6c285e9a] {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.socials[data-v-6c285e9a] {
+  display: flex;
+  gap: var(--space-m)
+}
+.icon[data-v-6c285e9a] {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.icon[data-v-6c285e9a]:hover {
+  color: var(--c-light-blue);
+}
+@media (min-width: 800px) {
+section[data-v-6c285e9a] {
+    grid-template-columns: 1fr 1fr;
+    max-height: 100vh;
+    overflow: hiden;
+}
+.wrapper[data-v-6c285e9a] {
+    display: flex;
+    justify-content: center;
+}
+.header[data-v-6c285e9a] {
+    width: 55%;
+}
+.cards[data-v-6c285e9a] {
+    width: 35%;
+    padding-block: 0;
+}
+}
+</style><style type="text/css" data-vite-dev-id="/Users/_xbaran/crypto-api-website/src/components/TheNav.vue?vue&amp;type=style&amp;index=0&amp;scoped=051b0db4&amp;lang.css">
+nav[data-v-051b0db4] {
+  position: fixed;
+  background-color: var(--nav-background-color);
+  width: 100%;
+  padding: var(--space-2xs);
+  z-index: 10;
+  transition: top 0.3s ease-in;
+}
+.menu[data-v-051b0db4] {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-3);
+  inset: 0;
+  background-color: var(--nav-menu-background-color);
+  background-position: center;
+  background-size: cover;
+  background-image: url('/src/assets/svg/polygon-scatter-haikei-mobile.svg');
+  translate: 120vw;
+  transition: translate 0.3s ease-out;
+  z-index: 100;
+}
+.menu a[data-v-051b0db4] {
+  font-size: var(--font-size-2);
+}
+.menuActive[data-v-051b0db4] {
+  translate: 0;
+}
+.logo-container[data-v-051b0db4] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.logo-container:hover img[data-v-051b0db4] {
+  rotate: 90deg;
+}
+img[data-v-051b0db4] {
+  width: 30px;
+  transition: rotate 0.3s;
+}
+ul[data-v-051b0db4] {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3rem;
+  list-style: none;
+}
+.container[data-v-051b0db4] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 70rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+.hamburger[data-v-051b0db4] {
+  position: relative;
+  background-color: transparent;
+  padding: 1em;
+  width: 40px;
+  z-index: 1000;
+}
+.hamburger-item[data-v-051b0db4] {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: var(--nav-hamburger-color);
+  transition: all 0.2s ease-out;
+}
+.hamburger-item[data-v-051b0db4]:first-child {
+  top: 0;
+}
+.hamburger-item[data-v-051b0db4]:last-child {
+  bottom: 0;
+}
+.hamburger-item[data-v-051b0db4]:nth-child(2) {
+  top: 50%;
+  translate: 0 -50%;
+}
+.hamburger.active .hamburger-item[data-v-051b0db4]:first-child,
+.hamburger.active .hamburger-item[data-v-051b0db4]:last-child {
+  right: 0;
+  width: 90%;
+}
+.hamburger.active .hamburger-item[data-v-051b0db4]:first-child {
+  rotate: -135deg;
+}
+.hamburger.active .hamburger-item[data-v-051b0db4]:last-child {
+  rotate: 135deg;
+}
+.hamburger.active .hamburger-item[data-v-051b0db4]:nth-child(2) {
+  left: 0;
+  width: 85%;
+}
+.nav-link[data-v-051b0db4] {
+  position: relative;
+  color: var(--nav-link-color);
+}
+.nav-link[data-v-051b0db4]::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  height: 2px;
+  width: 100%;
+  scale: 0;
+  background-color: var(--nav-link-color);
+  translate: -50%;
+  transition: scale 0.3s;
+}
+.nav-link[data-v-051b0db4]:hover::before {
+  scale: 1;
+}
+.nav-link[data-v-051b0db4] {
+  padding-block: var(--space-s);
+  padding-inline: var(--space-2xs);
+}
+@media (min-width: 768px) {
+.menu[data-v-051b0db4] {
+    position: relative;
+    inset: auto;
+    height: auto;
+    width: auto;
+    translate: 0;
+    background-image: url();
+    background-color: transparent;
+}
+ul[data-v-051b0db4],
+  .menu[data-v-051b0db4] {
+    flex-direction: row;
+}
+.desktop[data-v-051b0db4] {
+    display: none;
+}
+.menu a[data-v-051b0db4] {
+    font-size: var(--font-size-1);
+}
+}
+</style><style type="text/css" data-vite-dev-id="/Users/_xbaran/crypto-api-website/src/components/MarketSection.vue?vue&amp;type=style&amp;index=0&amp;scoped=3902add9&amp;lang.css">
+h2[data-v-3902add9] {
+  font-size: var(--font-size-5);
+  text-align: center;
+  padding-bottom: var(--space-l);
+}
+.container[data-v-3902add9] {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+}
+.controls[data-v-3902add9] {
+  text-align: center;
+  margin-top: var(--space-s-m);
+}
+.coin-card[data-v-3902add9] {
+  min-height: 300px;
+  border: 2px solid;
+  border-color: var(--c-cyan);
+  border-radius: 7px;
+  background-color: var(--c-blue-transparent);
+  padding: var(--space-s);
+}
+@media (min-width: 768px) {
+.coin-card[data-v-3902add9] {
+    min-height: 350px;
+}
+}
+</style><style type="text/css" data-vite-dev-id="/Users/_xbaran/crypto-api-website/src/components/ChooseUs.vue?vue&amp;type=style&amp;index=0&amp;scoped=c59cbadb&amp;lang.css">
+h2[data-v-c59cbadb] {
+  text-align: center;
+  font-size: var(--font-size-5);
+}
+.container[data-v-c59cbadb] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header[data-v-c59cbadb] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: var(--space-l);
+}
+.header p[data-v-c59cbadb] {
+  position: relative;
+  max-width: 700px;
+}
+.header p[data-v-c59cbadb]::before {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 3px;
+  background-color: linear-gradient(to left, #1e589a, #00f260, #1e589a);
+  bottom: 0;
+}
+.main[data-v-c59cbadb] {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  border: 2px solid;
+  margin-top: var(--space-s);
+  padding: var(--space-l);
+  border-color: var(--c-cyan);
+  border-radius: 7px;
+  background-color: var(--c-blue-transparent);
+}
+.item[data-v-c59cbadb] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 1em;
+}
+@media (min-width: 768px) {
+.main[data-v-c59cbadb] {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+}
+</style><style type="text/css" data-vite-dev-id="/Users/_xbaran/crypto-api-website/src/App.vue?vue&amp;type=style&amp;index=0&amp;lang.css">
+body {
+  height: auto;
+}
+main {
+  position: relative;
+  background-image: url('/src/assets/svg/polygon-scatter-haikei-large.svg');
+  background-position: center;
+  background-size: cover;
+  z-index: 4;
+}
+#blob {
+  height: 34vmax;
+  aspect-ratio: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  opacity: 0.8;
+  background-color: var(--c-blue);
+}
+#blur {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  backdrop-filter: blur(12vmax);
+}
+@media (max-width: 768px) {
+#blob {
+    display: none;
+}
+}
+</style><style type="text/css" data-vite-dev-id="/Users/_xbaran/crypto-api-website/src/components/base/BaseButton.vue?vue&amp;type=style&amp;index=0&amp;scoped=33235260&amp;lang.css">
+button[data-v-33235260],
+a[data-v-33235260] {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  border: 2px solid;
+  padding: 0.8rem 2.4rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition:
+    border 0.3s,
+    background-color 0.3s,
+    color 0.3s;
+  color: var(--color-text);
+}
+.flat[data-v-33235260] {
+  border-color: var(--button-border-color-primary);
+  background-color: var(--button-bg-primary);
+  color: var(--button-color-text-primary);
+}
+.flat[data-v-33235260]:hover {
+  border-color: var(--button-border-color-primary-hover);
+  background-color: var(--button-bg-primary-hover);
+  color: var(--button-color-text-pirmary-hover);
+}
+.accent[data-v-33235260] {
+  position: relative;
+  background-color: var(--button-bg-accent);
+  border-color: var(--button-border-color-accent);
+  color: var(--button-color-text-accent);
+}
+.accent[data-v-33235260]:hover {
+  border-color: var(--button-border-color-accent-hover);
+  background-color: var(--button-bg-accent-hover);
+  color: var(--button-color-text-accent-hover);
+}
+.button-shadow[data-v-33235260],
+.button-border[data-v-33235260] {
+  position: absolute;
+  inset: -8px;
+  z-index: -1;
+  filter: blur(15px);
+  border-radius: 8px;
+}
+.button-border[data-v-33235260] {
+  inset: -5px;
+  filter: blur(0px);
+}
+</style></head>
+  <body>
+    <div id="app" data-v-app=""><div id="blur"></div><div id="blob"></div><main><nav data-v-051b0db4="" id="navbar" style="top: -130px;"><div data-v-051b0db4="" class="container"><div data-v-051b0db4=""><img data-v-051b0db4="" src="./Vite App_files/logo.svg" alt=""></div><ul data-v-051b0db4="" class="menu"><li data-v-051b0db4=""><a data-v-051b0db4="" href="http://localhost:5173/" class="router-link-active router-link-exact-active nav-link" aria-current="page"> Home </a></li><li data-v-051b0db4=""><a data-v-051b0db4="" class="nav-link" href="http://localhost:5173/#best"> About </a></li><li data-v-051b0db4=""><a data-v-051b0db4="" class="nav-link" href="http://localhost:5173/#best"> Market </a></li><li data-v-051b0db4=""><a data-v-051b0db4="" class="nav-link" href="http://localhost:5173/#pricing"> Pricing </a></li><li data-v-051b0db4=""><a data-v-33235260="" data-v-051b0db4="" href="http://localhost:5173/" class="router-link-active router-link-exact-active accent" aria-current="page"><div data-v-33235260="" class="button-shadow" style="background: conic-gradient(from 166deg, rgb(30, 88, 154), rgb(0, 242, 96), rgb(30, 88, 154));"></div><div data-v-33235260="" class="button-border" style="background: conic-gradient(from 166deg, rgb(30, 88, 154), rgb(0, 242, 96), rgb(30, 88, 154));"></div>Join</a></li></ul><button data-v-051b0db4="" class="hamburger desktop"><div data-v-051b0db4="" class="hamburger__inner"><div data-v-051b0db4="" class="hamburger-item"></div><div data-v-051b0db4="" class="hamburger-item"></div><div data-v-051b0db4="" class="hamburger-item"></div></div></button></div></nav><section data-v-6c285e9a=""><div data-v-6c285e9a="" class="wrapper"><div data-v-6c285e9a="" class="header"><div data-v-6c285e9a="" class="flow"><h1 data-v-6c285e9a="" class="heading">Lorem ipsum dolor sit amet.</h1><p data-v-6c285e9a=""> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum vero modi magnam doloribus beatae sequi magni veritatis, blanditiis eos, itaque ex consequuntur delectus dolores soluta, dicta corporis fuga molestiae accusamus? </p><div data-v-6c285e9a="" class="buttons"><button data-v-33235260="" data-v-6c285e9a="" class="accent"><div data-v-33235260="" class="button-shadow" style="background: conic-gradient(from 165deg, rgb(30, 88, 154), rgb(0, 242, 96), rgb(30, 88, 154));"></div><div data-v-33235260="" class="button-border" style="background: conic-gradient(from 165deg, rgb(30, 88, 154), rgb(0, 242, 96), rgb(30, 88, 154));"></div>Join</button><button data-v-33235260="" data-v-6c285e9a="" class="flat"><!--v-if--><!--v-if-->Go to market</button></div></div><div data-v-6c285e9a="" class="socials"><svg data-v-6c285e9a="" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" size="45"><path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M16.5 7.5l0 .01"></path></svg><svg data-v-6c285e9a="" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" size="45"><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path></svg><svg data-v-6c285e9a="" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" size="45"><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path><path d="M8 11l0 5"></path><path d="M8 8l0 .01"></path><path d="M12 16l0 -5"></path><path d="M16 16v-3a2 2 0 0 0 -4 0"></path></svg><svg data-v-6c285e9a="" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" size="45"><path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path></svg></div></div><div data-v-6c285e9a="" class="cards"><div data-v-6c285e9a="" class="card" style="transform: rotateX(0deg);"><img data-v-6c285e9a="" src="./Vite App_files/cockatoo-8409655_1280.webp" alt="papuga"></div><div data-v-6c285e9a="" class="card" style="transform: rotateX(0deg);"><img data-v-6c285e9a="" src="./Vite App_files/bighorn-sheep-8113311_1280.webp" alt="baran"></div><div data-v-6c285e9a="" class="card"><img data-v-6c285e9a="" src="./Vite App_files/eagle-owl.jpg" alt=""></div><div data-v-6c285e9a="" class="card" style="transform: rotateX(0deg);"><img data-v-6c285e9a="" src="./Vite App_files/42407.png" alt=""></div></div></div></section><section data-v-3902add9="" id="market"><div class="wrapper" data-v-3902add9=""><h2 class="heading" data-v-3902add9="">Market</h2><div class="container" data-v-3902add9=""><div class="coin-card" data-v-3902add9="">one</div><div class="coin-card" data-v-3902add9="">two</div><div class="coin-card" data-v-3902add9="">three</div><div class="coin-card" data-v-3902add9="">four</div><div class="coin-card" data-v-3902add9="">four</div><div class="coin-card" data-v-3902add9="">four</div><div class="coin-card" data-v-3902add9="">four</div><div class="coin-card" data-v-3902add9="">four</div></div></div><div class="controls" data-v-3902add9=""><span data-v-3902add9=""> &lt; </span><span data-v-3902add9="">1 </span><span data-v-3902add9="">2 </span><span data-v-3902add9="">3 </span><span data-v-3902add9="">4 </span><span data-v-3902add9="">5 </span><span data-v-3902add9=""> &gt;</span></div></section><section data-v-c59cbadb="" id="chooseUs"><div class="wrapper" data-v-c59cbadb=""><div class="container" data-v-c59cbadb=""><div class="header flow" data-v-c59cbadb=""><h2 class="heading" data-v-c59cbadb="">Why Choose Us</h2><p data-v-c59cbadb=""> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque laudantium voluptate maxime, animi quos itaque modi sequi quibusdam dolore, commodi ipsa rem velit et aperiam repudiandae. Beatae dicta ad quidem. </p></div><div class="main" data-v-c59cbadb=""><div class="item" data-v-c59cbadb=""><h3 data-v-c59cbadb="">title</h3><p data-v-c59cbadb=""> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea corporis, quam dolor facere obcaecati nam. </p></div><div class="item" data-v-c59cbadb=""><h3 data-v-c59cbadb="">title</h3><p data-v-c59cbadb=""> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea corporis, quam dolor facere obcaecati nam. </p></div><div class="item" data-v-c59cbadb=""><h3 data-v-c59cbadb="">title</h3><p data-v-c59cbadb=""> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea corporis, quam dolor facere obcaecati nam. </p></div></div></div></div></section></main></div>
+    <script type="module" src="./Vite App_files/main.js"></script>
+  
+
+</body></html>
