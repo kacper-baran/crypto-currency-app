@@ -8,5 +8,5 @@ import BaseButton from '/src/components/base/BaseButton.vue'
 const app = createApp(App)
 
 app.use(router)
-app.component("base-button", BaseButton)
+app.component('base-button', BaseButton)
 app.mount('#app')

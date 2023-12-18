@@ -35,7 +35,7 @@
     <base-button
       link
       :to="{ name: 'home', hash: '#market' }"
-      :class="{ active: currentPage === '5'}"
+      :class="{ active: currentPage === '5' }"
       class="page-btn"
       @click="setPage('5')"
       >5</base-button
@@ -72,8 +72,8 @@ const setPage = (page) => {
 }
 
 .active {
-  border-color: var(--button-border-color-primary-hover)!important;
-  background-color: var(--button-bg-primary-hover)!important;
-  color: var(--button-color-text-pirmary-hover)!important;
+  border-color: var(--button-border-color-primary-hover) !important;
+  background-color: var(--button-bg-primary-hover) !important;
+  color: var(--button-color-text-pirmary-hover) !important;
 }
 </style>
