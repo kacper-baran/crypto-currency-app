@@ -22,7 +22,7 @@
             </span>
           </div>
           <span> Symbol: {{ coin.symbol }} </span>
-          <span> Symbol: {{ coin.market_data.current_price.usd }} USD </span>
+          <span> Price: {{ coin.market_data.current_price.usd }} USD </span>
         </div>
       </div>
     </div>
