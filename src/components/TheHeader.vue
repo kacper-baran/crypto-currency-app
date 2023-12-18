@@ -3,11 +3,11 @@
     <div class="wrapper">
       <div class="header">
         <div class="flow">
-          <h1 class="heading">Lorem ipsum dolor sit amet.</h1>
+          <h1 class="heading">CryptoHub: Navigate the Digital Markets With Us</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum vero modi magnam doloribus
-            beatae sequi magni veritatis, blanditiis eos, itaque ex consequuntur delectus dolores
-            soluta, dicta corporis fuga molestiae accusamus?
+            Your Gateway to Smart Crypto Trading. Elevate your strategy with real-time analysis,
+            expert insights, and market mastery. Unleash the power of digital assets for financial
+            success!
           </p>
           <div class="buttons">
             <base-button mode="accent">Join</base-button>

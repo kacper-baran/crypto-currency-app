@@ -5,34 +5,36 @@
         <div class="header flow">
           <h2 class="heading">Why Choose Us</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque laudantium voluptate
-            maxime, animi quos itaque modi sequi quibusdam dolore, commodi ipsa rem velit et aperiam
-            repudiandae. Beatae dicta ad quidem.
+            Choose CryptoHub for a smarter approach to crypto trading. With real-time analysis,
+            expert insights, and a commitment to your financial success, we're your trusted partner
+            in navigating the dynamic world of digital assets. Elevate your strategy and choose
+            excellence with CryptoHub.
           </p>
         </div>
         <div class="main">
           <div class="item">
             <IconSocial :size="39" stroke-width="1"></IconSocial>
-            <h3 class="heading">title</h3>
+            <h3 class="heading">Expert Insights</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea corporis, quam dolor
-              facere obcaecati nam.
+              Access exclusive expert insights and market analysis that empower you to make informed
+              decisions. Get a competitive edge in the dynamic world of cryptocurrency trading.
             </p>
           </div>
           <div class="item">
             <IconBrandDiscord :size="39" stroke-width="1"></IconBrandDiscord>
-            <h3 class="heading">title</h3>
+            <h3 class="heading">Comprehensive Resources</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea corporis, quam dolor
-              facere obcaecati nam.
+              Whether you're a novice or pro, access a wealth of resources to enhance your trading
+              skills, from beginner guides to advanced strategies.
             </p>
           </div>
           <div class="item">
             <IconDiscount :size="39" stroke-width="1"></IconDiscount>
-            <h3 class="heading">title</h3>
+            <h3 class="heading">Real-Time Updates</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea corporis, quam dolor
-              facere obcaecati nam.
+              Stay ahead in the fast-paced crypto market with our real-time updates, ensuring you
+              never miss a trading opportunity. Choose CryptoTradeHub for success in cryptocurrency
+              trading.
             </p>
           </div>
         </div>
@@ -91,6 +93,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-m-l);
+  align-items: start;
   border: 2px solid;
   margin-top: var(--space-s);
   padding: var(--space-l);
